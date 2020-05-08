@@ -1,36 +1,17 @@
 function drawChess() {
-    let mainBlock = document.querySelector('.main-board');
-
-    let block;
-
-    let flag = true;
-
+    const mainBlock = document.querySelector('.main-board');
+    
     for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
-
-            if (j == 0) {
-                flag = !flag;
-            }
-
-            block = document.createElement('div');
-
-
-            if (flag) {
-                block.className = 'block black';
-            } else {
-                block.className = 'block white';
-            }
-
+            const block = document.createElement('div');
             mainBlock.append(block);
-
-            flag = !flag;
-
+            if ((i+j)%2) {
+                block.classList.add('black');
+            } else {
+                block.classList.add('white');
+            }
         }
-
-
     }
-
-
 }
 
 drawChess();
