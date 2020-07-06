@@ -1,2 +1,2 @@
-# dmitrii-milk.github.io
+# Chess board
 it's a chess board
